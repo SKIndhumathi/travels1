@@ -58,7 +58,9 @@ const req = https.request(options, (res) => {
         let cleanData = [];
         
         for (const page of payload.results) {
-          const name = page.properties.Name?.title?.[0]?.plain_text || "Unknown Vehicle";
+          const name = page.properties.Name?.title?.[0]?.plain_text;
+          if (!name) continue;
+          
           const slugText = (page.properties.Slug?.rich_text || [])
             .map(t => t.plain_text)
             .join(' ');
