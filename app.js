@@ -1,5 +1,5 @@
 /* =============================================
-   VISMI CABS TOURS & TRAVELS - MAIN SCRIPT
+   TVS TOURS & TRAVELS - MAIN SCRIPT
    ============================================= */
 
 // ---- HEADER SCROLL EFFECT ----
@@ -170,7 +170,7 @@ function handleEnquiry(e) {
   }
 
   // Build WhatsApp message
-  let waMsg = `🚗 *New Booking Enquiry - Vismi Cabs*\n\n`;
+  let waMsg = `🚗 *New Booking Enquiry - TVS Tours & Travels*\n\n`;
   waMsg += `👤 *Name:* ${name}\n`;
   waMsg += `📞 *Phone:* ${phone}\n`;
   if (from) waMsg += `📍 *From:* ${from}\n`;
@@ -180,7 +180,7 @@ function handleEnquiry(e) {
   if (message) waMsg += `💬 *Message:* ${message}\n`;
 
   const encodedMsg = encodeURIComponent(waMsg);
-  const waUrl = `https://wa.me/916383532448?text=${encodedMsg}`;
+  const waUrl = `https://wa.me/919150306264?text=${encodedMsg}`;
 
   // Open WhatsApp
   window.open(waUrl, '_blank');
@@ -298,8 +298,8 @@ document.querySelectorAll('.package-card, .service-card').forEach(card => {
   });
 });
 
-console.log('%c✈️ TVS TOURS AND TRAVELS, Madurai', 'color: #C2185B; font-size: 18px; font-weight: bold;');
-console.log('%cContact: 6383532448 | Manikandan M', 'color: #666; font-size: 12px;');
+console.log('%c✈️ TVS TOURS & TRAVELS, Madurai', 'color: #C2185B; font-size: 18px; font-weight: bold;');
+console.log('%cContact: 9150306264 | Manikandan M', 'color: #666; font-size: 12px;');
 
 // ---- LOAD PRICING FROM Live Database ----
 function loadLivePricing() {
