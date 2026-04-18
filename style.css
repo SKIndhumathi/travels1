@@ -4,32 +4,27 @@
 
 /* --- ROOT VARIABLES --- */
 :root {
-  --primary: #006D5B;       /* Deep Peacock Green - Elegant & Unique */
-  --primary-dark: #004D40;  /* Darker Forest Teal */
-  --primary-light: #E0F2F1; /* Soft Mint / Seafoam */
-  --secondary: #111827;     /* Deep Charcoal */
-  --secondary-light: #1F2937; 
-  --accent: #D4AF37;        /* Antique Gold - Looks amazing with Teal */
-  --accent2: #F0FDF4;       /* Soft Greenish tint */
-  --text-dark: #0F172A;     /* Dark Slate Text */
-  --text-medium: #374151;   /* Medium Gray */
-  --text-light: #6B7280;    /* Muted Gray */
+  --primary: #0f172a;       /* Deep Midnight Blue - Luxury Foundation */
+  --primary-dark: #020617;
+  --primary-light: #eff6ff;
+  --accent: #1e40af;        /* Royal Blue Accent */
+  --secondary: #d4af37;     /* Metallic Gold */
+  --text-dark: #0f172a;
+  --text-medium: #334155;
+  --text-light: #64748b;
   --white: #ffffff;
-  --bg-light: #F9FAFB;
-  --bg-muted: #F3F4F6;
-  --success: #10B981;
+  --bg-light: #f8fafc;
+  --bg-muted: #f1f5f9;
   --whatsapp: #25D366;
-  --border: rgba(0, 109, 91, 0.08); /* Peacock subtle border */
+  --border: #e2e8f0;
   --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 10px 40px rgba(0, 109, 91, 0.08); 
-  --shadow-lg: 0 25px 50px -12px rgba(0, 109, 91, 0.12);
-  --shadow-primary: 0 8px 30px rgba(0, 109, 91, 0.25);
+  --shadow-md: 0 10px 40px rgba(15, 23, 42, 0.06); 
+  --shadow-lg: 0 25px 50px -12px rgba(15, 23, 42, 0.1);
   --radius-sm: 8px;
   --radius-md: 16px;
-  --radius-lg: 32px;
+  --radius-lg: 24px;
   --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   --font: 'Outfit', sans-serif;
-  --font-serif: 'Playfair Display', Georgia, serif;
   --header-h: 100px;
 }
 
