@@ -25,6 +25,7 @@
   --radius-lg: 24px;
   --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   --font: "Outfit", sans-serif;
+  --font-serif: "Playfair Display", serif;
   --header-h: 100px;
 }
 
@@ -1452,6 +1453,9 @@ textarea {
 }
 .testimonials .section-title {
   color: #fff;
+}
+.testimonials .section-title em {
+  color: var(--secondary);
 }
 .testimonials-slider {
   position: relative;
