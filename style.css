@@ -960,45 +960,42 @@ textarea {
    PACKAGES SECTION
    ============================================= */
 .packages {
-  background:
-    linear-gradient(rgba(243, 244, 246, 0.94), rgba(243, 244, 246, 0.94)),
-    url("images/south_india_collage.png");
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background: var(--bg-muted);
+  position: relative;
+  overflow: hidden;
 }
+
 .packages-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 32px;
 }
+
 .package-card {
   background: var(--white);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
   transition: var(--transition);
   border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
+
 .package-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+  border-color: rgba(30, 64, 175, 0.3);
 }
-.package-card.featured-pkg {
-  border-color: var(--primary);
-}
+
 .package-image {
-  width: 100% !important;
-  height: 250px !important;
-  overflow: hidden !important;
-  position: relative;
-  display: block;
-}
-.card-slider {
+  height: 260px;
   position: relative;
   overflow: hidden;
+  background: #000;
 }
+
 .card-slide {
   position: absolute;
   top: 0;
@@ -1007,15 +1004,19 @@ textarea {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition:
-    opacity 0.5s ease-in-out,
-    transform 0.5s ease-in-out;
+  transition: opacity 0.6s ease-in-out, transform 1.2s ease;
   transform: scale(1.1);
 }
+
 .card-slide.active {
   opacity: 1;
   transform: scale(1);
 }
+
+.package-card:hover .card-slide.active {
+  transform: scale(1.15);
+}
+
 .slider-controls {
   position: absolute;
   top: 50%;
@@ -1023,113 +1024,98 @@ textarea {
   display: flex;
   justify-content: space-between;
   transform: translateY(-50%);
-  padding: 0 10px;
+  padding: 0 15px;
+  z-index: 5;
   opacity: 0;
   transition: opacity 0.3s;
-  pointer-events: none;
-  z-index: 10;
 }
-.card-slider:hover .slider-controls {
+
+.package-card:hover .slider-controls {
   opacity: 1;
 }
+
 .slider-btn {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.9);
-  border: none;
-  cursor: pointer;
+  color: var(--accent);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--primary);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  pointer-events: auto;
-  transition:
-    background 0.2s,
-    color 0.2s;
-}
-.slider-btn:hover {
-  background: var(--primary);
-  color: #fff;
-}
-.package-image img:not(.card-slide) {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   transition: var(--transition);
 }
-.package-badge {
-  position: absolute;
-  top: 14px;
-  left: 14px;
-  background: var(--secondary);
+
+.slider-btn:hover {
+  background: var(--accent);
   color: #fff;
-  font-size: 0.76rem;
-  font-weight: 700;
-  padding: 5px 12px;
-  border-radius: 50px;
 }
-.package-badge.hot {
-  background: var(--primary);
-}
+
 .package-info {
-  padding: 22px;
-}
-.package-info h3 {
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-  min-height: 2.8rem;
+  padding: 24px;
+  flex: 1;
   display: flex;
-  align-items: center;
+  flex-direction: column;
 }
-.package-info p {
-  font-size: 0.87rem;
-  color: var(--text-light);
-  line-height: 1.6;
-  margin-bottom: 14px;
+
+.package-info h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 12px;
+  line-height: 1.4;
+  height: 3.2rem;
+  overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  overflow: hidden;
+}
+
+.package-info p {
+  font-size: 0.92rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 20px;
   height: 2.8rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
+
 .package-highlights {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
+
 .package-highlights span {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 5px;
-  font-size: 0.78rem;
-  color: var(--text-medium);
-  background: var(--bg-muted);
-  padding: 4px 10px;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: rgba(30, 64, 175, 0.08);
+  padding: 6px 14px;
   border-radius: 50px;
 }
-.package-highlights span i {
-  color: var(--primary);
-  font-size: 0.72rem;
-}
+
 .package-footer {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 14px;
-  border-top: 1px solid var(--border);
+  margin-top: auto;
+  padding-top: 15px;
 }
-.package-price {
-  font-size: 0.85rem;
-  color: var(--text-light);
+
+@media (max-width: 992px) {
+  .packages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-.package-price strong {
-  font-size: 1.1rem;
-  color: var(--primary);
-  font-weight: 800;
+
+@media (max-width: 640px) {
+  .packages-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
 }
 
 /* =============================================
